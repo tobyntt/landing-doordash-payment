@@ -18,7 +18,7 @@
           <!-- <div class="mobile-menu">
             <a href="#"><img src="./img/mobile-logo.svg" alt="" /></a>
           </div> -->
-          <a class="main-logo" href="/"
+          <a class="main-logo" href="index.html"
             ><img src="./img/desktop-logo.svg" class="fullsize-logo" />
           </a>
         </div>
@@ -80,7 +80,7 @@
               of the order.
             </p>
           </div>
-          <div className="promotions-pay">
+          <div class="promotions-pay">
             <img src="./img/promotions-pay.png" alt="promotions-pay" />
             <h3>Promotions Pay</h3>
             <p>
@@ -145,5 +145,169 @@
         </button>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <section class="footer__banner">
+        <div class="banner-container">
+          <img
+            class="banner-container__logo"
+            src="./img/doordash-white-logo.svg"
+          />
+        </div>
+      </section>
+      <section class="footer__content">
+        <article class="main-content">
+          <!-- <Merchants class="merchants-logo" /> -->
+          <img src="./img/merchants.svg" class="merchants-logo" />
+
+          <!-- navigate links  -->
+          <nav class="nav">
+            <div class="nav__earning">
+              <h1 class="title">earning</h1>
+              <ul>
+                <li>
+                  <a href="#">Pay</a>
+                </li>
+                <li>
+                  <a href="#">Discounts</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav__ways-to-dash">
+              <h1 class="title">ways to dash</h1>
+              <ul>
+                <li>
+                  <a href="#">Shop & Deliver</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav__community">
+              <h1 class="title">community</h1>
+              <ul>
+                <li>
+                  <a href="#">Spotlights</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav__resources">
+              <h1 class="title">resourses</h1>
+              <ul>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- mobile apps and social network -->
+          <div class="mobile-and-network">
+            <ul class="social-network">
+              <li>
+                <a href="https://twitter.com/doordash" target="blank">
+                  <!-- <Twitter class="social-icons" /> -->
+                  <img src="./img/Twitter.svg" class="social-icons" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/DoorDash" target="blank">
+                  <!-- <Facebook class="social-icons" /> -->
+                  <img src="./img/Facebook.svg" class="social-icons" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/doordash" target="blank">
+                  <!-- <Instagram class="social-icons" /> -->
+                  <img src="./img/Instagram.svg" class="social-icons" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/doordash"
+                  target="blank"
+                >
+                  <!-- <LinkedIn class="social-icons" /> -->
+                  <img src="./img/LinkedIn.svg" class="social-icons" />
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-apps">
+              <li>
+                <a
+                  href="https://apps.apple.com/au/app/doordash-dasher/id1451754591"
+                  target="blank"
+                >
+                  <img
+                    src="https://img.cdn4dd.com/s/media/merchant/web/en/app-store-badge.svg"
+                    class="apple-store applications"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.doordash.driverapp&hl=en&pli=1"
+                  target="blank"
+                >
+                  <img
+                    src="https://img.cdn4dd.com/s/media/merchant/web/en/google-play-badge.svg"
+                    class="google-play applications"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- footer bar  -->
+        <article class="footer-bar">
+          <!-- <div
+            class={`select-wrapper ${
+              IsSelectActive ? "select-active" : ""
+            }`}
+            ref={selectRef}
+            onClick={() => SetIsSelectActive(true)}
+          >
+            <select name="language" id="language" class="language">
+              <option value="US">English (US)</option>
+              <option value="US">Español (US)</option>
+              <option value="CA">English (CA)</option>
+              <option value="CA">Français (CA)</option>
+              <option value="AU" selected>
+                English (AU)
+              </option>
+              <option value="NZ">English (NZ)</option>
+            </select>
+          </div> -->
+
+          <div class="select-wrapper">
+            <select name="language" id="language" class="language">
+              <option value="US">English (US)</option>
+              <option value="US">Español (US)</option>
+              <option value="CA">English (CA)</option>
+              <option value="CA">Français (CA)</option>
+              <option value="AU" selected>English (AU)</option>
+              <option value="NZ">English (NZ)</option>
+            </select>
+          </div>
+
+          <div class="terms-and-privacy">
+            <a href="#">Terms</a>
+            <span>|</span>
+            <a href="#">Privacy</a>
+          </div>
+
+          <div class="copyright">© 2022 DoorDash</div>
+        </article>
+      </section>
+    </footer>
   </body>
 </html>

@@ -1,6 +1,8 @@
 /* --------------------------- ++ BASE ++ --------------------------- */
 @use "./config" as con;
 
+// the "å" in the footer
+
 li {
   list-style: none;
 }
@@ -15,6 +17,7 @@ ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "TT Norms Pro", sans-serif;
 }
 
 a,
@@ -48,13 +51,6 @@ h2 {
   font-size: 44px;
   line-height: 53px;
   text-align: center;
-}
-
-p,
-a,
-span,
-h3 {
-  font-family: "TT Norms Pro", sans-serif;
 }
 
 /*  ============================= HOME PAGE ============================= */
@@ -397,6 +393,186 @@ main {
   }
 }
 
+/* Footer */
+.footer {
+  &__banner {
+    background-color: con.$primary-theme-color;
+
+    .banner-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: inherit;
+      color: white;
+      max-width: con.$primary-width;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+
+      &__logo {
+        height: 22px;
+        width: max-content;
+      }
+    }
+  }
+
+  &__content {
+    max-width: con.$primary-width;
+    padding: 3.25rem 1rem;
+    margin: 0 auto;
+
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+
+      .merchants-logo {
+        min-width: 172px;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 55%;
+        gap: 1rem;
+
+        & > * {
+          .title {
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20.7px;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li {
+              line-height: 18.4px;
+              font-weight: 300;
+
+              a {
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .mobile-and-network {
+        .social-network {
+          display: flex;
+          justify-content: space-between;
+
+          .social-icons {
+            filter: invert(41%) sepia(3%) saturate(28%) hue-rotate(31deg)
+              brightness(95%) contrast(90%);
+
+            &:hover {
+              filter: invert(0%) sepia(93%) saturate(26%) hue-rotate(283deg)
+                brightness(103%) contrast(103%);
+            }
+          }
+        }
+
+        .mobile-apps {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          margin-top: 14px;
+
+          li {
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-color: rgba($color: white, $alpha: 0.3);
+              left: 0;
+              top: 0;
+              opacity: 1;
+              transition: all 100ms linear;
+            }
+
+            &:hover {
+              &::after {
+                opacity: 0;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+
+    .select-wrapper {
+      position: relative;
+      background-color: con.$input-bg-color;
+      border-radius: 8px;
+      width: 160px;
+      padding: 10px 12px;
+
+      .language {
+        border: none;
+        appearance: none;
+        background-color: inherit;
+        width: 105%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/down-arrow.svg);
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+        left: calc(100% - 32px);
+        top: calc(100% - 30px);
+        pointer-events: none;
+      }
+    }
+
+    .select-active {
+      border: 2px solid con.$primary-theme-color;
+    }
+
+    .terms-and-privacy {
+      display: flex;
+      gap: 6px;
+      color: con.$primary-theme-color;
+      line-height: 24px;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        color: inherit;
+      }
+    }
+
+    .copyright {
+      color: con.$primary-theme-color;
+      line-height: 24px;
+    }
+  }
+}
+
 // ========================== RESPONSIVE ========================== //
 @media (max-width: 960px) {
   .hero {
@@ -409,6 +585,20 @@ main {
     .payment-earning {
       &__container {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 779px) {
+  .footer {
+    &__content {
+      .main-content {
+        nav {
+          & > * {
+            min-width: 7.75rem;
+          }
+        }
       }
     }
   }
