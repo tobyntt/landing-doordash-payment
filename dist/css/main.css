@@ -370,7 +370,40 @@ main .payment-getpaid {
   padding: 6rem 3.25rem;
   margin-bottom: 3.25rem;
   background-color: #fff0ed;
-  background-color: aqua;
+}
+main .payment-getpaid__title {
+  font-size: 36px;
+  line-height: 41.4px;
+  margin-bottom: 1.375rem;
+}
+main .payment-getpaid__payment-cycle {
+  line-height: 59.8px;
+  font-size: 3.25rem;
+  color: #d1311f;
+  font-weight: 500;
+}
+main .payment-getpaid__content {
+  max-width: 17rem;
+  text-align: center;
+  line-height: 22.4px;
+}
+main .payment-getpaid__button {
+  padding: 0.55rem;
+  background-color: #eb1700;
+  color: white;
+  border: none;
+  border-radius: 62.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 18.4px;
+}
+main .payment-getpaid__button a {
+  padding: 0.5rem;
+  line-height: 20px;
+  font-weight: 700;
+}
+main .payment-getpaid__button:hover {
+  background-color: #d91400;
 }
 
 @media (max-width: 960px) {

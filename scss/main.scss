@@ -354,41 +354,46 @@ main {
     margin-bottom: 3.25rem;
 
     background-color: con.$secondary-theme-color;
-    background-color: aqua;
 
-    // &__title {
-    //   font-size: 36px;
-    //   line-height: 41.4px;
-    //   // font-family: "TTNormsMedium";
-    //   margin-bottom: 1.375rem;
-    // }
+    &__title {
+      font-size: 36px;
+      line-height: 41.4px;
+      margin-bottom: 1.375rem;
+    }
 
-    // &__payment-cycle {
-    //   line-height: 59.8px;
-    //   font-size: 3.25rem;
-    //   color: var.$primary-theme-text;
-    //   // font-family: "TTNormsMedium";
-    // }
+    &__payment-cycle {
+      line-height: 59.8px;
+      font-size: 3.25rem;
+      color: con.$primary-theme-color;
+      font-weight: 500;
+    }
 
-    // &__content {
-    //   max-width: 17rem;
-    //   text-align: center;
-    //   line-height: 22.4px;
-    // }
+    &__content {
+      max-width: 17rem;
+      text-align: center;
+      line-height: 22.4px;
+    }
 
-    // &__button {
-    //   padding: 0.55rem;
-    //   a {
-    //     padding: 0.5rem;
-    //     line-height: 20px;
-    //     // font-family: "TTNormsMedium";
-    //     font-weight: 700;
-    //   }
+    &__button {
+      padding: 0.55rem;
+      background-color: con.$primary-theme-bold-color;
+      color: white;
+      border: none;
+      border-radius: 62.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 18.4px;
 
-    //   &:hover {
-    //     background-color: con.$hover-theme-button;
-    //   }
-    // }
+      a {
+        padding: 0.5rem;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: con.$hover-theme-button;
+      }
+    }
   }
 }
 
