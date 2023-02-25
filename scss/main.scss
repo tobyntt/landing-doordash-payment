@@ -1,0 +1,480 @@
+/* --------------------------- ++ BASE ++ --------------------------- */
+@use "./config" as con;
+
+li {
+  list-style: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea,
+select,
+input,
+button {
+  outline: none;
+}
+
+h1 {
+  line-height: 100%;
+  font-size: 54px;
+  font-family: "TT Norms Pro", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 53px;
+  text-align: center;
+}
+
+p,
+a,
+span,
+h3 {
+  font-family: "TT Norms Pro", sans-serif;
+}
+
+/*  ============================= HOME PAGE ============================= */
+/* --- Header --- */
+header {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: con.$primary-width;
+    height: 72px;
+    border: 1px solid blue;
+    margin: 0 auto;
+    padding: 18px;
+
+    &__logo {
+      height: 18px;
+
+      a {
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    &__navbar {
+      ul {
+        display: flex;
+        gap: 3.875rem;
+        padding-right: 20px;
+
+        li {
+          .nav-item {
+            position: relative;
+
+            a {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 20.7px;
+            }
+
+            &::after {
+              content: "";
+              top: 4px;
+              left: calc(100% + 0.25rem);
+              width: 1rem;
+              height: 1rem;
+              background-image: url(../img/down-arrow.svg);
+              // background-size: cover;
+              position: absolute;
+            }
+          }
+
+          &:hover {
+            .nav-item {
+              a {
+                color: con.$primary-theme-color;
+              }
+
+              &::after {
+                rotate: 180deg;
+                transition: all 250ms ease;
+                /* change down arrow into red color*/
+                filter: invert(40%) sepia(81%) saturate(6529%)
+                  hue-rotate(352deg) brightness(86%) contrast(90%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --- Hero --- */
+.hero {
+  background-color: con.$primary-theme-color;
+
+  .hero-container {
+    max-width: con.$primary-width;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 6.45rem 0 6.45rem;
+
+    &__content {
+      width: 64.5%;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & > * {
+        color: con.$white-text-color;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        line-height: 2.875rem;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 25.2px;
+        max-width: 24.0625rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        background-color: white;
+        color: con.$primary-theme-color;
+        cursor: pointer;
+        width: max-content;
+        line-height: 20px;
+
+        &:hover {
+          background-color: con.$hover-button;
+          transition: all 150ms linear;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        transform: skew(-10deg, 0deg);
+        transform-origin: top;
+        width: 20.2%;
+        height: 100%;
+        background-color: con.$primary-theme-color;
+      }
+    }
+  }
+}
+
+/* All Sections */
+main {
+  /* --- Section 1 - Earnings --- */
+  .payment-earning {
+    padding: 3.25rem 1rem;
+    margin: 0 auto;
+    max-width: con.$primary-width;
+
+    &__title {
+      text-align: center;
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      width: 64.7%;
+      margin: 0 auto;
+
+      & > * {
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 1.125rem;
+          font-weight: 500;
+          line-height: 20.7px;
+          text-align: center;
+        }
+
+        p {
+          line-height: 22.4px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  /* --- Section 2 - Tracking Earnings --- */
+  .payment-track-earning {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.35rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3.25rem 1rem;
+    max-width: con.$primary-width;
+
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__content {
+      width: 100%;
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0 auto;
+        width: fit-content;
+
+        & > * {
+          max-width: 26rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+          line-height: 1.875rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 22.4px;
+        }
+      }
+    }
+  }
+
+  /* --- Section 3 - Promos --- */
+  .payment-promos {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3.25rem 1rem;
+    max-width: con.$primary-width;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+
+      & > * {
+        max-width: 26rem;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        width: 100%;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 22.4px;
+      }
+    }
+
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Section 4 - Get Paid */
+  .payment-getpaid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 6rem 3.25rem;
+    margin-bottom: 3.25rem;
+
+    background-color: con.$secondary-theme-color;
+    background-color: aqua;
+
+    // &__title {
+    //   font-size: 36px;
+    //   line-height: 41.4px;
+    //   // font-family: "TTNormsMedium";
+    //   margin-bottom: 1.375rem;
+    // }
+
+    // &__payment-cycle {
+    //   line-height: 59.8px;
+    //   font-size: 3.25rem;
+    //   color: var.$primary-theme-text;
+    //   // font-family: "TTNormsMedium";
+    // }
+
+    // &__content {
+    //   max-width: 17rem;
+    //   text-align: center;
+    //   line-height: 22.4px;
+    // }
+
+    // &__button {
+    //   padding: 0.55rem;
+    //   a {
+    //     padding: 0.5rem;
+    //     line-height: 20px;
+    //     // font-family: "TTNormsMedium";
+    //     font-weight: 700;
+    //   }
+
+    //   &:hover {
+    //     background-color: con.$hover-theme-button;
+    //   }
+    // }
+  }
+}
+
+// ========================== RESPONSIVE ========================== //
+@media (max-width: 960px) {
+  .hero {
+    .hero-container {
+      padding: 1rem 1rem 0 1rem;
+    }
+  }
+
+  main {
+    .payment-earning {
+      &__container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .hero-container {
+      flex-direction: column-reverse;
+
+      &__content {
+        margin: 1rem 0 1rem 0;
+        width: 100%;
+        align-items: center;
+        & > * {
+          text-align: center;
+        }
+
+        p {
+          max-width: none;
+        }
+      }
+
+      &__image {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  main {
+    .payment-earning {
+      &__title {
+        font-size: 2rem;
+      }
+
+      &__container {
+        flex-direction: column;
+
+        & > * {
+          p {
+            max-width: 27.5rem;
+          }
+        }
+      }
+    }
+
+    .payment-track-earning {
+      flex-direction: column;
+
+      &__content {
+        align-items: center;
+
+        & > * {
+          text-align: center;
+        }
+      }
+    }
+
+    .payment-promos {
+      flex-direction: column-reverse;
+      padding-top: 0rem;
+
+      &__content {
+        align-items: center;
+
+        & > * {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

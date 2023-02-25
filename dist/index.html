@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header-container__logo">
+          <!-- <div class="mobile-menu">
+            <a href="#"><img src="./img/mobile-logo.svg" alt="" /></a>
+          </div> -->
+          <a class="main-logo" href="/"
+            ><img src="./img/desktop-logo.svg" class="fullsize-logo" />
+          </a>
+        </div>
+
+        <nav class="header-container__navbar">
+          <ul>
+            <li>
+              <div class="nav-item"><a href="#">Earnings</a></div>
+            </li>
+            <li>
+              <div class="nav-item"><a href="#">Tracking</a></div>
+            </li>
+            <li>
+              <div class="nav-item"><a href="#">Promos</a></div>
+            </li>
+            <li>
+              <div class="nav-item"><a href="#">Pay cycle</a></div>
+            </li>
+            <li>
+              <div class="nav-item"><a href="#">Questioms</a></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-container">
+        <div class="hero-container__content">
+          <h1>Dasher Pay</h1>
+          <p>
+            What you make as a Dasher depends on where, how much, and what time
+            of day you choose to deliver. Here is an overview of how Dasher pay
+            is calculated, along with tools to help you track and increase your
+            Dasher earnings, so you can meet your goals.
+          </p>
+        </div>
+        <div class="hero-container__image">
+          <img
+            src="https://images.ctfassets.net/trvmqu12jq2l/10cEZMmLUnaegOIYdX6tMQ/a825c520ccc82ab22f9423e78692ba5a/dx_spotlight_houston_grier.jpg?q=70&amp;w=480"
+            alt="hero-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- Section 1 - Earnings -->
+      <section class="payment-earning" id="section-1">
+        <h2 class="payment-earning__title">How much can I earn?</h2>
+        <div class="payment-earning__container">
+          <div class="base-pay">
+            <img src="./img/base-pay.png" alt="base-pay" />
+            <h3>Base Pay</h3>
+            <p>
+              You’ll always earn <b>Base Pay</b> for any delivery. Base Pay is
+              calculated based on the estimated time, distance, and desirability
+              of the order.
+            </p>
+          </div>
+          <div className="promotions-pay">
+            <img src="./img/promotions-pay.png" alt="promotions-pay" />
+            <h3>Promotions Pay</h3>
+            <p>
+              Promotions like Peak Pay and Challenges help you earn more per
+              delivery when it’s busy. Challenges let you earn extra money for
+              completing a certain number of deliveries in a set amount of time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -Tracking Earnings -->
+      <section class="payment-track-earning" id="section-2">
+        <div class="payment-track-earning__image">
+          <img src="../dist/img/track-earning.png" />
+        </div>
+        <div class="payment-track-earning__content">
+          <div class="content-container">
+            <h2>Track your Earnings</h2>
+            <p>
+              The Dasher app shows earning opportunities near you and tracks
+              what you make.
+            </p>
+            <p>
+              Open the app and tap <b>"Earnings"</b> to see what you make on a
+              particular day, to cash out your earnings with Fast Pay, or to
+              view your Earnings History.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 - Promos -->
+      <section class="payment-promos" id="section-3">
+        <div class="payment-promos__content">
+          <h2>Make the most of your dash</h2>
+          <p>
+            Plan your dashing around mealtimes, weekends, sporting events, and
+            late nights.
+          </p>
+          <p>
+            After logging in to dash, tap <b>"Promos"</b> to find Peak Pay near
+            you. If you don’t get an order immediately, head toward popular
+            restaurants.
+          </p>
+        </div>
+        <div class="payment-promos__image">
+          <img src="../dist/img/promos.jpg" alt="" />
+        </div>
+      </section>
+
+      <!-- Section 4 - Get Paid -->
+      <section class="payment-getpaid">
+        <h2 class="payment-getpaid__title">Get Paid</h2>
+        <h1 class="payment-getpaid__payment-cycle">Weekly</h1>
+        <p class="payment-getpaid__content">
+          You’ll automatically get paid every week with a direct deposit to your
+          bank account.
+        </p>
+        <button class="payment-getpaid__button">
+          <a href="#">Learn more</a>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
