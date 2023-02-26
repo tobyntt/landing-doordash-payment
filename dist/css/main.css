@@ -52,6 +52,12 @@ h2 {
 
 /*  ============================= HOME PAGE ============================= */
 /* --- Header --- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background-color: white;
+}
 header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,7 +70,6 @@ header .header-container {
           align-items: center;
   max-width: 1256px;
   height: 72px;
-  border: 1px solid blue;
   margin: 0 auto;
   padding: 18px;
 }
@@ -102,6 +107,17 @@ header .header-container__navbar ul li:hover .nav-item a {
   color: #d1311f;
 }
 header .header-container__navbar ul li:hover .nav-item::after {
+  rotate: 180deg;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  /* change down arrow into red color*/
+  -webkit-filter: invert(40%) sepia(81%) saturate(6529%) hue-rotate(352deg) brightness(86%) contrast(90%);
+          filter: invert(40%) sepia(81%) saturate(6529%) hue-rotate(352deg) brightness(86%) contrast(90%);
+}
+header .header-container__navbar ul li .nav-item-active a {
+  color: #d1311f;
+}
+header .header-container__navbar ul li .nav-item-active::after {
   rotate: 180deg;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
@@ -202,6 +218,7 @@ main {
   /* --- Section 2 - Tracking Earnings --- */
   /* --- Section 3 - Promos --- */
   /* Section 4 - Get Paid */
+  /* Scroll Up Button */
 }
 main .payment-earning {
   padding: 3.25rem 1rem;
@@ -399,6 +416,35 @@ main .payment-getpaid__button a {
 main .payment-getpaid__button:hover {
   background-color: #d91400;
 }
+main .scroll-up-button {
+  bottom: 5.8rem;
+  right: 5%;
+  position: fixed;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(209, 49, 31, 0.8);
+  width: 60px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+}
+main .scroll-up-button .material-icons {
+  font-size: 38px;
+  color: white;
+}
+main .scroll-up-button:hover {
+  background-color: #d1311f;
+}
 
 /* Footer */
 .footer__banner {
@@ -457,6 +503,7 @@ main .payment-getpaid__button:hover {
 }
 .footer__content .main-content .nav > * .title {
   text-transform: uppercase;
+  text-align: left;
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: 500;
@@ -663,5 +710,45 @@ main .payment-getpaid__button:hover {
   }
   main .payment-promos__content > * {
     text-align: center;
+  }
+  main .scroll-up-button {
+    bottom: 11rem;
+    scale: 75%;
+  }
+
+  .footer__content {
+    padding: 32px 16px 32px 16px;
+  }
+  .footer__content .main-content .merchants-logo {
+    display: none;
+  }
+  .footer__content .main-content nav {
+    display: none !important;
+  }
+  .footer__content .main-content .mobile-and-network .social-network {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    gap: 1.25rem;
+  }
+  .footer__content .main-content .mobile-and-network .mobile-apps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer__content .footer-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 0.65rem;
+  }
+  .footer__content .footer-bar .select-wrapper {
+    width: 100%;
+  }
+  .footer__content .footer-bar .select-wrapper .language {
+    width: 100%;
   }
 }

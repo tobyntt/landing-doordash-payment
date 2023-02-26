@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="./css/main.css" />
     <!-- Fonts -->
     <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet" />
+    <!-- Fontawesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/2f8c13d852.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -26,19 +35,16 @@
         <nav class="header-container__navbar">
           <ul>
             <li>
-              <div class="nav-item"><a href="#">Earnings</a></div>
+              <div class="nav-item"><a href="section-1">Earnings</a></div>
             </li>
             <li>
-              <div class="nav-item"><a href="#">Tracking</a></div>
+              <div class="nav-item"><a href="section-2">Tracking</a></div>
             </li>
             <li>
-              <div class="nav-item"><a href="#">Promos</a></div>
+              <div class="nav-item"><a href="section-3">Promos</a></div>
             </li>
             <li>
-              <div class="nav-item"><a href="#">Pay cycle</a></div>
-            </li>
-            <li>
-              <div class="nav-item"><a href="#">Questioms</a></div>
+              <div class="nav-item"><a href="section-4">Pay cycle</a></div>
             </li>
           </ul>
         </nav>
@@ -128,12 +134,12 @@
           </p>
         </div>
         <div class="payment-promos__image">
-          <img src="../dist/img/promos.jpg" alt="" />
+          <img src="../dist/img/promos.jpg" />
         </div>
       </section>
 
       <!-- Section 4 - Get Paid -->
-      <section class="payment-getpaid">
+      <section class="payment-getpaid" id="section-4">
         <h2 class="payment-getpaid__title">Get Paid</h2>
         <h1 class="payment-getpaid__payment-cycle">Weekly</h1>
         <p class="payment-getpaid__content">
@@ -144,6 +150,10 @@
           <a href="#">Learn more</a>
         </button>
       </section>
+
+      <div class="scroll-up-button" id="scroll-up-button">
+        <i class="material-icons">expand_less</i>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -309,5 +319,7 @@
         </article>
       </section>
     </footer>
+
+    <script src="./js/Script.js"></script>
   </body>
 </html>
