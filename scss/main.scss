@@ -67,7 +67,6 @@ header {
     align-items: center;
     max-width: con.$primary-width;
     height: 72px;
-    // border: 1px solid blue;
     margin: 0 auto;
     padding: 18px;
 
@@ -652,6 +651,35 @@ main {
 }
 
 @media (max-width: 768px) {
+  header {
+    height: fit-content;
+    border-bottom: 1px solid con.$primary-theme-color;
+
+    .header-container {
+      height: 100%;
+
+      &__logo {
+        display: none;
+      }
+
+      &__navbar {
+        width: 100%;
+        ul {
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+
+          li {
+            a {
+              padding-right: 100%;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .hero {
     .hero-container {
       flex-direction: column-reverse;
