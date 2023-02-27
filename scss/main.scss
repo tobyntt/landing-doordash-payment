@@ -224,6 +224,15 @@ header {
 
 /* All Sections */
 main {
+  .section-active {
+    h2 {
+      color: con.$primary-theme-color;
+      border-bottom: 2px solid con.$primary-theme-color;
+    }
+
+    border-bottom: 0.25rem solid con.$primary-theme-color;
+  }
+
   /* --- Section 1 - Earnings --- */
   .payment-earning {
     padding: 3.25rem 1rem;

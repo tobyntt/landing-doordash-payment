@@ -2,7 +2,6 @@
 const header = document.querySelector("header");
 const headerHeight = header.offsetHeight;
 const navLinksItems = document.querySelectorAll(".nav-item a");
-console.log(navLinksItems);
 
 navLinksItems.forEach((navLinksItem) => {
   navLinksItem.addEventListener("click", (event) => {
@@ -13,7 +12,7 @@ navLinksItems.forEach((navLinksItem) => {
       navLinksItem.parentElement.classList.remove("nav-item-active");
     });
 
-    // then add the active style on the clicked menu item
+    // then add the activse style on the clicked menu item
     navLinksItem.parentElement.classList.add("nav-item-active");
 
     // get the href to find the id of the clicked section and scroll to it
@@ -26,6 +25,32 @@ navLinksItems.forEach((navLinksItem) => {
       top: topOffset - headerHeight,
       behavior: "smooth",
     });
+  });
+});
+
+// ====================== Active Stage when Scrolling ====================
+// Get all the section elements with the class
+const mainSections = document.querySelectorAll("main section");
+console.log(mainSections);
+
+// Listen for the scroll event on the window object
+window.addEventListener("scroll", function () {
+  // Loop through each section element
+  mainSections.forEach(function (mainSection) {
+    // Get the dimensions and position of the section element
+    const mainSectionRect = mainSection.getBoundingClientRect();
+
+    // Check if the div element is within the viewport
+    if (
+      mainSectionRect.top < window.innerHeight &&
+      mainSectionRect.bottom >= 0
+    ) {
+      // Add the active class to the section element
+      mainSection.classList.add("section-active");
+    } else {
+      // Remove the active class from the section element
+      mainSection.classList.remove("section-active");
+    }
   });
 });
 

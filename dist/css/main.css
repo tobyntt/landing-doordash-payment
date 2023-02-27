@@ -220,6 +220,13 @@ main {
   /* Section 4 - Get Paid */
   /* Scroll Up Button */
 }
+main .section-active {
+  border-bottom: 0.25rem solid #d1311f;
+}
+main .section-active h2 {
+  color: #d1311f;
+  border-bottom: 2px solid #d1311f;
+}
 main .payment-earning {
   padding: 3.25rem 1rem;
   margin: 0 auto;
