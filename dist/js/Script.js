@@ -1,7 +1,12 @@
 // ======================= Navbar Menu  ========================
+const mainSections = document.querySelectorAll("main section");
 const header = document.querySelector("header");
 const headerHeight = header.offsetHeight;
 const navLinksItems = document.querySelectorAll(".nav-item a");
+
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+});
 
 navLinksItems.forEach((navLinksItem) => {
   navLinksItem.addEventListener("click", (event) => {
@@ -29,30 +34,31 @@ navLinksItems.forEach((navLinksItem) => {
 });
 
 // ====================== Active Stage when Scrolling ====================
-// Get all the section elements with the class
-const mainSections = document.querySelectorAll("main section");
-console.log(mainSections);
 
-// Listen for the scroll event on the window object
-window.addEventListener("scroll", function () {
-  // Loop through each section element
-  mainSections.forEach(function (mainSection) {
-    // Get the dimensions and position of the section element
-    const mainSectionRect = mainSection.getBoundingClientRect();
+// // Get all the section elements with the class
+// const mainSections = document.querySelectorAll("main section");
+// console.log(mainSections);
 
-    // Check if the div element is within the viewport
-    if (
-      mainSectionRect.top < window.innerHeight &&
-      mainSectionRect.bottom >= 0
-    ) {
-      // Add the active class to the section element
-      mainSection.classList.add("section-active");
-    } else {
-      // Remove the active class from the section element
-      mainSection.classList.remove("section-active");
-    }
-  });
-});
+// // Listen for the scroll event on the window object
+// window.addEventListener("scroll", function () {
+//   // Loop through each section element
+//   mainSections.forEach(function (mainSection) {
+//     // Get the dimensions and position of the section element
+//     const mainSectionRect = mainSection.getBoundingClientRect();
+
+//     // Check if the div element is within the viewport
+//     if (
+//       mainSectionRect.top < window.innerHeight &&
+//       mainSectionRect.bottom >= 0
+//     ) {
+//       // Add the active class to the section element
+//       mainSection.classList.add("section-active");
+//     } else {
+//       // Remove the active class from the section element
+//       mainSection.classList.remove("section-active");
+//     }
+//   });
+// });
 
 // ======================= Scroll Up Button ========================
 const scrollUpButton = document.getElementById("scroll-up-button");
