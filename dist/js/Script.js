@@ -54,7 +54,3 @@ window.onscroll = function () {
     scrollUpButton.style.opacity = "0";
   }
 };
-
-// const section1 = document.getElementById("section-1");
-// const rect = section1.getBoundingClientRect();
-// console.log(rect);
