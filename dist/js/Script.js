@@ -12,7 +12,7 @@ navLinksItems.forEach((navLinksItem) => {
   navLinksItem.addEventListener("click", (event) => {
     event.preventDefault();
 
-    // once clicked, remove all the active style on all menu items
+    // once clicked, remove all the active style on all menu items.
     navLinksItems.forEach((navLinksItem) => {
       navLinksItem.parentElement.classList.remove("nav-item-active");
     });
