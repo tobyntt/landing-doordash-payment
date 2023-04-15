@@ -38,7 +38,7 @@ navLinksItems.forEach((navLinksItem) => {
 // ======================= Scroll Up Button ========================
 const scrollUpButton = document.getElementById("scroll-up-button");
 
-// when clicked, moving up to the top of the page
+// when clicked, moving up to the top of the page.
 scrollUpButton.addEventListener("click", (event) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
