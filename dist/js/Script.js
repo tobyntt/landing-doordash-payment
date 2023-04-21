@@ -43,7 +43,7 @@ scrollUpButton.addEventListener("click", (event) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// dectect when the page reach to the end to show the button.
+// dectect when the page reach to the end to show the button..
 window.onscroll = function () {
   if (
     window.innerHeight + Math.ceil(window.pageYOffset) >=
