@@ -20,7 +20,7 @@ navLinksItems.forEach((navLinksItem) => {
     // then add the activse style on the clicked menu item
     navLinksItem.parentElement.classList.add("nav-item-active");
 
-    // get the href to find the id of the clicked section and scroll to it
+    // get the href to find the id of the clicked section and scroll to it..
     const targetId = navLinksItem.getAttribute("href");
     const targetElement = document.getElementById(targetId);
     const topOffset = targetElement.offsetTop;
